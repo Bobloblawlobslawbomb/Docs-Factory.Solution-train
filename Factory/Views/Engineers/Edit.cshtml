@@ -1,0 +1,38 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Edit</h2>
+
+<h4>Edit this Engineer: @Html.DisplayFor(model => model.FirstName)</h4>
+
+<h4>Machines the engineer is assigned to:</h4>
+<ol>
+  @foreach (var join in Model.JoinEntities)
+  {
+    <li>@join.Machine.Name</li>
+  }
+</ol>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.EngineerId)
+  <br>
+  @Html.LabelFor(model => model.FirstName)
+  @Html.EditorFor(model => model.FirstName)
+  <br>
+  @Html.LabelFor(model => model.LastName)
+  @Html.EditorFor(model => model.LastName)
+  <br>
+  @Html.LabelFor(model => model.HireDate)
+  @Html.TextBoxFor(model => model.HireDate)
+  <br>
+  @Html.Label("Add a machine")
+  @Html.DropDownList("MachineId")
+  <br>
+  <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
