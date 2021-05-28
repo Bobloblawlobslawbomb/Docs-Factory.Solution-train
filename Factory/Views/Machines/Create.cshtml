@@ -4,7 +4,7 @@
 
 @model Factory.Models.Machine
 
-<h4>Add a new Machine</h4>
+<h4>Add a new Machine:</h4>
 
 @using (Html.BeginForm())
 {
@@ -16,7 +16,7 @@
   @Html.Label("Select Engineer")
   @Html.DropDownList("EngineerId")
   <br>
-  <input type="submit" value="Add new Machine" class="btn btn-primary" />
+  <input type="submit" value="Add this new Machine" class="btn btn-success btn-sm" />
 }
-
+<br>
 <p>@Html.ActionLink("Show all Machines", "Index")</p>
