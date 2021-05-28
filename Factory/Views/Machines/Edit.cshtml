@@ -4,9 +4,10 @@
 
 @model Factory.Models.Machine
 
-<h2>Edit</h2>
-
-<h4>Edit this Machine: @Html.DisplayFor(model => model.Name)</h4>
+<h2>Edit Machine</h2>
+<hr />
+<h4>Edit this Machine</h4>
+<p>@Html.DisplayFor(model => model.Name)</p>
 
 <h4>Engineers the machine is assigned to:</h4>
 <ol>
@@ -15,7 +16,7 @@
     <li>@join.Engineer.FirstName</li>
   }
 </ol>
-
+<hr />
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.MachineId)
@@ -29,7 +30,8 @@
   @Html.Label("Add an engineer")
   @Html.DropDownList("EngineerId")
   <br>
-  <input type="submit" value="Save" />
+  <input type="submit" value="Save" class="btn btn-success btn-xs" />
 }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
+<hr />
