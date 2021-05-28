@@ -1,9 +1,7 @@
-# Claires Stylist/Client Tracker
+# Dr. Sillystringz's Factory
 
 #### A Brief Description.
-_Un outil pour Madame Claire pour voir les clients de chacun de ses stylistes._
-
-An MVC 'one-to-many' example project that allows Claire to track her stylists and their clients. 
+_An MVC 'many-to-many' example project that allows, the unfortunately named Dr. Sillystingz, to view their engineers and machines within their factory._ 
 
 ### By Giancarlo Vigneri
 ---
@@ -15,11 +13,12 @@ An MVC 'one-to-many' example project that allows Claire to track her stylists an
 >* _C#_
 >* _.NET 5 SDK_
 >* _ASP.NET_
+>* _Entity Framework_
 >* _Bootstrap_
 
 ---
 ## Description 
-The program will allow someone named Claire who owns a salon to see a list of their stylists and their specialities as well as a list of clients associated with said stylist. Claires can also add/delete new/old stylists. Clients also have similar functionality as well as being associated with a particular stylist. 
+The program will allow someone named Dr. Sillystingz to 'manage' their engineers and machines within their factory. The Doctor may see a list of all their engineers as well as a list of all their machines. When creating (hiring) a new engineer ol' Sawbones can enter a first and last name as well as a hired date, they may also choose a machine to associate with this engineer. Creating a listing for a new machine has similar functionality, except machines do not have a surname. The medical practitioner can also add/delete new/old engineers and machines. Within the engineer or machines details page the Doctor can remove machines/engineers associated with each other type respectively.
 
 ---
 
@@ -41,47 +40,44 @@ The program will allow someone named Claire who owns a salon to see a list of th
 >* If you set up MySQL Server with a different username and/or password, the command will be `mysql -u[YourUsername] -p[YourPassword]` (omit the square brackets'[ ]')
 
 #### Importing `giancarlo_vigneri.sql` _(the included database .sql file)_:
-> (note: these instructions are only applicable after one has cloned the git repository: "https://github.com/Bobloblawlobslawbomb/HairSalon.Solution" -- see 'Running the Program' instructions below)
+> (note: these instructions are only applicable after one has cloned the git repository: "https://github.com/Bobloblawlobslawbomb/Docs-Factory.Solution-train" -- see 'Running the Program' instructions below)
 > 1) Open __MySQL Workbench__.
 > 2) In the Navigator > Administration window, select Data Import/Restore.
 > 3) In Import Options select Import from Self-Contained File.
 > 4) Navigate to `giancarlo_vigneri.sql`.
 > 5) Under Default Schema to be Imported To, select the New button.
 > 6) Enter the name of the database.
->    - In this case: `hair_salon`.
+>    - In this case: `factory`.
 > 7) Click Ok.
 > 8) Click Start Import.
 > 9) Reopen the Navigator > Schemas tab. Right click and select Refresh All. _Our new test database will appear._
 
 ### Running the Program:
-> 1) Clone the repository: "https://github.com/Bobloblawlobslawbomb/HairSalon.Solution"
-> 2) Navigate to the 'HairSalon.Solution/' directory on your computer
+> 1) Clone the repository: "https://github.com/Bobloblawlobslawbomb/Docs-Factory.Solution-train"
+> 2) Navigate to the 'Factory.Solution/' directory on your computer
 > 3) Open with your favorite text editor (Visual Studio Code, is a pretty sweet one)
 > 4) To run the web app:
->   - Navigate to `HairSalon.Solution/HairSalon` in your command line
+>   - Navigate to `Factory.Solution/Factory` in your command line
 >   - Run the command `touch appsettings.json`
     - open the newly created "appsettings.json" file
     - add the following code to the .json file:
 >   ```
 >   {
 >       "ConnectionStrings": {
->       "DefaultConnection": "Server=localhost;Port=3306;database=>> hair_salon;uid=[YOUR USERNAME];pwd=[YOUR PASSWORD];"
+>       "DefaultConnection": "Server=localhost;Port=3306;database=>> factory;uid=[YOUR USERNAME];pwd=[YOUR PASSWORD];"
 >       }
 >    }
 >    ```
    >*_NOTE: make sure that [YOUR USERNAME] and [YOUR PASSWORD] match the database username and password of your local MySQL server (omit the square brackets. Also note: port 3306 is the default)_
-> - Run the command `dotnet restore` to restore the dependencies that are listed in `HairSalon.csproj`
+> - Run the command `dotnet restore` to restore the dependencies that are listed in `Factory.csproj`
 >  - Run the command `dotnet build` to build the project and its dependencies into a set of binaries.
 > - Finally, run the command `dotnet run` to run the project!
 > - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app.
 
 ## Known Bugs
 
-* _Background image does not display via css styling_
+* _none...Yet_
 
-#### Background Image
-> Photo by: [Guilherme Petri](https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)
-> Via: [Unsplash](https://unsplash.com/)
 ---
 
 ## License [GPL] (https://choosealicense.com/licenses/gpl-3.0/)
@@ -92,4 +88,4 @@ _if you do run into any issues or have questions, ideas, or concerns; I would gr
 ## Contact Information
 _Contact Giancarlo Vigneri at: bobloblaw.vigneri@gmail.com_ 
 
-(What do you call a good hair stylist? A shear delight.)
+(There are 10 types of people in this world; those who understand binary and those who don't.)
